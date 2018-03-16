@@ -1,0 +1,50 @@
+j15.html
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hello world </title>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+	<h1 id="h">Heading</h1>
+	<p id="p1">This is a paragraph 1</p>
+	<p>This is a paragraph 2</p>
+<div>
+	<h2> This is h2 </h2>
+</div>
+<ul id="ul">
+	<li> list 1 </li>
+	<li> list 2 </li>
+</ul>
+
+<button onclick="addItem()"> Click </button>
+
+
+<script type="text/javascript">
+
+		$('#h').click(function () {
+			// change text to hello world
+			$('#h').text("Hello world");
+		})
+
+		setTimeout(function() {
+			$('#h').text("Heading");
+			$('#h').css("border-style","dashed");
+		}	,8000);
+		
+		$('#p1').click(function(){
+			$(this).html('<h2>foo bar</h2>');
+		})
+
+</script>
+
+</body>
+</html>

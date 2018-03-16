@@ -1,0 +1,59 @@
+j18.html
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello world</title> 
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	// $(document).ready(() => {
+	// 	$('#h').click( () => {
+	// 		$('#h').text("Hello world")
+	// 	}) 	
+	// });
+	
+	$(() => {
+		$('#h').click( () => {
+			$('#h').text("Hello world")
+					.hide(2000)
+					.show(2000);
+		}) 	
+	});
+</script>
+
+</head>
+<body>
+	<h1 id="h">Heading</h1>
+	<p id="p1">This is a paragraph 1</p>
+	<p>This is a paragraph 2</p>	
+	<div>
+		<h2>This is h2</h2>
+	</div>
+	<ul id='ul'>
+		<li>list 1</li>
+		<li>list 2</li>
+		<li>list 3</li>
+	</ul>
+
+	<button onclick="addItem()">Click</button>
+
+<script type="text/javascript">		
+	setTimeout(() => {
+		$('#h').text("Heading");
+		$('#h').css("border-style","dashed");
+	} ,5000);
+
+	$('#p1').click( (e) => {
+		$(e.currentTarget).html('<h2>foo bar</h2>')
+		 		.fadeOut(3000)
+				.fadeIn(3000);
+	})
+</script>
+
+
+</body>
+</html>
